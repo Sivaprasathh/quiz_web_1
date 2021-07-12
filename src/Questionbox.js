@@ -11,7 +11,7 @@ class QuestionBox extends React.Component {
       const {correct} = this.props;
       const {Qkey} = this.props;
       const {response} = this.props;
-  
+      const {btn} = this.props;
     return(
      <div>
      <h4>{question}</h4>
@@ -22,11 +22,14 @@ class QuestionBox extends React.Component {
            onClick = {() =>{
              calculate(text,correct,Qkey)
              response(index)
+
            }}
+           disabled={btn}
         >
             {text}
             </button>
         ))}
+        
      </div>
     )
   }
